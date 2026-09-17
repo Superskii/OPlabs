@@ -1,0 +1,24 @@
+'use strict';
+let Masyv = [true, 'hello', 5,
+    12, -200, false, 
+    false, 'world',
+    'word', true, 28,
+    'you', 'Cube', 10,
+    15, 13, 50, 2738,
+    true, false
+
+];
+let Collection = {numbers: 0, strings: 0, booleans: 0};
+for(let i = 0; i < Masyv.length; i++){
+    let Type = typeof Masyv[i];
+    if(Type === "number"){
+        Collection.numbers += 1;
+    }
+    else if(Type === "string"){
+        Collection.strings += 1;
+    }
+    else if(Type === "boolean"){
+        Collection.booleans += 1;
+    }
+    }
+    console.log(Collection);
