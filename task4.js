@@ -1,7 +1,7 @@
 'use strict';
 function check(Elements, Types){
 for(let i = 0; i < Elements.length; i++){
-    if(!Elements.isArray){
+try{
     let Type = typeof Elements[i];
     if(Type === "number"){
         Types.numbers = Types.numbers + 1;
@@ -12,20 +12,18 @@ for(let i = 0; i < Elements.length; i++){
     else if(Type === "boolean"){
         Types.booleans = Types.booleans + 1;
     }
-    
     }
     
-    else {
+    catch(error) {
         console.log("Помилка");
     }
-    
+
     }
-    console.dir(Types);
-    
+ console.dir(Types);
 }
 function Types(Elements, Types){
 for(let i = 0; i < Elements.length; i++){
-    if(!Elements.isArray){
+    try{
     let Type = typeof Elements[i];
     if(Type === "number"){
         Types.numbers = 0;
@@ -37,7 +35,7 @@ for(let i = 0; i < Elements.length; i++){
         Types.booleans = 0;
     }
     }
-    else {
+    catch(error) {
         console.log("Помилка");
     }
     }
