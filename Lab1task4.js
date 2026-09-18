@@ -1,7 +1,6 @@
 'use strict';
 function check(Elements, Types){
 for(let i = 0; i < Elements.length; i++){
-try{
     let Type = typeof Elements[i];
     if(Type === "number"){
         Types.numbers = Types.numbers + 1;
@@ -12,18 +11,13 @@ try{
     else if(Type === "boolean"){
         Types.booleans = Types.booleans + 1;
     }
-    }
     
-    catch(error) {
-        console.log("Помилка");
-    }
 
     }
  console.dir(Types);
 }
 function Types(Elements, Types){
 for(let i = 0; i < Elements.length; i++){
-    try{
     let Type = typeof Elements[i];
     if(Type === "number"){
         Types.numbers = 0;
@@ -35,11 +29,8 @@ for(let i = 0; i < Elements.length; i++){
         Types.booleans = 0;
     }
     }
-    catch(error) {
-        console.log("Помилка");
     }
-    }
-}
+
 let Collection = {};
 let Collection2 = {};
 let Masyv2 = [true, false, true];
